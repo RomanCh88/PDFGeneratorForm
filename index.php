@@ -109,6 +109,12 @@
                         <input type="text" class="form-control" name="payment-date" access="false" id="payment-date"
                             title=" Payment date">
                     </div>
+                    <div class="formbuilder-text form-group field-check-in-out-time">
+                        <label for="check-in-out-time" class="formbuilder-text-label">เวลาเช็คอิน/เอ้าท<span
+                                class="tooltip-element" tooltip="Check in/out time"></span></label>
+                        <input type="text" class="form-control" name="check-in-out-time" access="false" id="check-in-out-time"
+                            title="Check in/out time">
+                    </div>
                     <div class="formbuilder-button form-group field-button-1628707855925">
                         <button type="submit" class="btn-success btn" name="button-1628707855925" access="false"
                             style="success" id="button-1628707855925">Generate PDF</button>

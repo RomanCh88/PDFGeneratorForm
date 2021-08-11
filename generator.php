@@ -70,17 +70,48 @@ if (isset($_POST["room-type"])) {
 }
 
 if (isset($_POST["promo-code"])) {
-    $pdf->SetXY(132, 87); 
+    $pdf->SetXY(129, 88.7); 
     $str = iconv('UTF-8', 'cp874', $_POST["promo-code"]);
     $pdf->Write(0, $str); 
 }
 
 
 if (isset($_POST["book-from"])) {
-    $pdf->SetXY(112, 93); 
+    $pdf->SetXY(110, 95); 
     $str = iconv('UTF-8', 'cp874', $_POST["book-from"]);
     $pdf->Write(0, $str); 
 }
+
+if (isset($_POST["amount-paid"])) {
+    $pdf->SetXY(113, 126); 
+    $str = iconv('UTF-8', 'cp874', $_POST["amount-paid"]);
+    $pdf->Write(0, $str); 
+}
+
+if (isset($_POST["payment-status"])) {
+    $pdf->SetXY(129, 132.3); 
+    $str = iconv('UTF-8', 'cp874', $_POST["payment-status"]);
+    $pdf->Write(0, $str); 
+}
+
+if (isset($_POST["payment-platform"])) {
+    $pdf->SetXY(126, 139); 
+    $str = iconv('UTF-8', 'cp874', $_POST["payment-platform"]);
+    $pdf->Write(0, $str); 
+}
+
+if (isset($_POST["payment-date"])) {
+    $pdf->SetXY(118, 145.7); 
+    $str = iconv('UTF-8', 'cp874', $_POST["payment-date"]);
+    $pdf->Write(0, $str); 
+}
+
+if (isset($_POST["check-in-out-time"])) {
+    $pdf->SetXY(127, 152); 
+    $str = iconv('UTF-8', 'cp874', $_POST["check-in-out-time"]);
+    $pdf->Write(0, $str); 
+}
+
 
 $pdf->Output();  
 ?>
