@@ -73,6 +73,18 @@
                         <input type="text" class="form-control" name="room-type" access="false" id="room-type"
                             title="Room type">
                     </div>
+                    <div class="formbuilder-text form-group field-promo-code">
+                        <label for="promo-code" class="formbuilder-text-label">Promotion code<span class="tooltip-element"
+                                tooltip="Promo code"></span></label>
+                        <input type="text" class="form-control" name="promo-code" access="false" id="promo-code"
+                            title="Promotion code">
+                    </div>
+                    <div class="formbuilder-text form-group field-book-from">
+                        <label for="book-from" class="formbuilder-text-label">จองจาก<span class="tooltip-element"
+                                tooltip="Book from"></span></label>
+                        <input type="text" class="form-control" name="book-from" access="false" id="book-from"
+                            title="Book from">
+                    </div>
                     <div class="formbuilder-text form-group field-amount-paid">
                         <label for="amount-paid" class="formbuilder-text-label">จาํ นวนเงิน<span class="tooltip-element"
                                 tooltip="Amount paid"></span></label>

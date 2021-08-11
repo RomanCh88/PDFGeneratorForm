@@ -18,8 +18,8 @@ $tplId = $pdf->importPage(1);
 $pdf->useTemplate($tplId, 0, 0, 210);
 
 $pdf->SetTextColor(131,84,60); 
-$pdf->AddFont('THSarabunNew','B','THSarabunNew_b.php');
-$pdf->SetFont('THSarabunNew','B',16);
+$pdf->AddFont('Tahoma','B','tahomab.php');
+$pdf->SetFont('Tahoma','B',12);
 
 
 if (isset($_POST["booking-ref"])) {
@@ -29,25 +29,58 @@ if (isset($_POST["booking-ref"])) {
 
 if (isset($_POST["check-in"])) {
     $pdf->SetXY(115, 44.5); 
-    $pdf->Write(0, $_POST["check-in"]); 
+    $str = iconv('UTF-8', 'cp874', $_POST["check-in"]);
+    $pdf->Write(0, $str); 
 }
 
 if (isset($_POST["check-out"])) {
     $pdf->SetXY(118, 51); 
-    $pdf->Write(0, $_POST["check-out"]); 
+    $str = iconv('UTF-8', 'cp874', $_POST["check-out"]);
+    $pdf->Write(0, $str); 
 }
 
 if (isset($_POST["number-nights"])) {
     $pdf->SetXY(121, 57); 
-    $pdf->Write(0, $_POST["number-nights"]); 
+    $str = iconv('UTF-8', 'cp874', $_POST["number-nights"]);
+    $pdf->Write(0, $str); 
 }
 
 if (isset($_POST["number-rooms"])) {
-    $pdf->SetXY(119, 63.5); 
-    $pdf->Write(0, $_POST["number-rooms"]); 
+    $pdf->SetXY(118, 63.5); 
+    $str = iconv('UTF-8', 'cp874', $_POST["number-rooms"]);
+    $pdf->Write(0, $str); 
+}
+
+if (isset($_POST["number-guests"])) {
+    $pdf->SetXY(113, 70); 
+    $str = iconv('UTF-8', 'cp874', $_POST["number-guests"]);
+    $pdf->Write(0, $str); 
+}
+
+if (isset($_POST["additional-amount"])) {
+    $pdf->SetXY(121, 76); 
+    $str = iconv('UTF-8', 'cp874', $_POST["additional-amount"]);
+    $pdf->Write(0, $str); 
+}
+
+if (isset($_POST["room-type"])) {
+    $pdf->SetXY(123, 82.5); 
+    $str = iconv('UTF-8', 'cp874', $_POST["room-type"]);
+    $pdf->Write(0, $str); 
+}
+
+if (isset($_POST["promo-code"])) {
+    $pdf->SetXY(132, 87); 
+    $str = iconv('UTF-8', 'cp874', $_POST["promo-code"]);
+    $pdf->Write(0, $str); 
 }
 
 
+if (isset($_POST["book-from"])) {
+    $pdf->SetXY(112, 93); 
+    $str = iconv('UTF-8', 'cp874', $_POST["book-from"]);
+    $pdf->Write(0, $str); 
+}
 
 $pdf->Output();  
 ?>
