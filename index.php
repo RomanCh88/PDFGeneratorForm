@@ -24,6 +24,7 @@
         <div class="row">
             <div class="col">
                 <div class="rendered-form">
+                <form action="generator.php" method="post">
                     <div class="formbuilder-text form-group field-booking-ref">
                         <label for="booking-ref" class="formbuilder-text-label">หมายเลขการจองห้องพัก<span
                                 class="tooltip-element" tooltip="Booking ref"></span></label>
